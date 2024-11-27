@@ -69,11 +69,11 @@ This program reverses an array of integers in place using two pointers. It demon
 ### How to Assemble and Run
 1. **Assemble the Code**:
    ```bash
-   nasm -f elf32 -o array_reverse.o array_reverse.asm
+   nasm -f elf64 -o array_reverse.o array_reverse.asm
 
 2. **Link the Object File**:
    ```bash 
-   ld -m elf_i386 -o array_reverse array_reverse.o
+   ld -o array_reverse array_reverse.o
 
 3. **Run the Program**:
    ```bash
@@ -81,7 +81,7 @@ This program reverses an array of integers in place using two pointers. It demon
 
 4. **Array Input**
 
-- The program accepts an array of 5 single-digit integers from the user(e.g., [7, 8, 9, 10, 11]).
+- The program accepts an array of 5 single-digit integers from the user(e.g., [7, 8, 9, 1, 3]).
 - After execution, it outputs the reversed array to memory, which can be observed using a debugger or by modifying the program to display the result.
 **NOTE:** The user enters 5 single-digit numbers one at a time.
 
@@ -119,15 +119,15 @@ This program calculates the factorial of a number using a modular approach. A su
 ### How to Assemble and Run
 1. **Assemble the Code**:
    ```bash
-   nasm -f elf32 -o factorial_subroutine.o factorial_subroutine.asm
+   nasm -f elf64 -o factorial_subroutine.o factorial_subroutine.asm
 
 2. **Link the Object File**:
    ```bash 
-   ld -m elf_i386 -o factorial_subroutine factorial_subroutine.o
+   ld -m elf_x86_64 -o factorial_program factorial_subroutine.o
 
 3. **Run the Program**:
    ```bash
-   ./factorial_subroutine
+   ./factorial_program
 
 4. **Number Input**
 - The program calculates the factorial of a number inputed by the user (e.g., 5) in the code.
@@ -183,16 +183,22 @@ This program simulates a sensor-based monitoring system. Based on a sensor value
 
 4. **Number Input**
 - The program uses a predefined sensor_value in the code (e.g., 70).
-- Based on this value and the users input:
-- If sensor_value > 50: Motor is turned ON, and alarm is triggered.
-- If 30 < sensor_value <= 50: Motor and alarm are both OFF.
-- If sensor_value <= 30: Motor and alarm remain OFF.
+- Provide a positive integer as the sensor value.
+- The program processes this value to determine motor and alarm statuses.
 - Outputs are stored in memory and can be printed or observed using a debugger.
+  
+Based on our code:
+
+- High Level (> 80): Motor ON, Alarm ON.
+- Moderate Level (> 50): Motor OFF, Alarm OFF.
+- Low Level (≤ 50): Motor ON, Alarm OFF.
+
 
 ### Example Input and Output
-- Input: 70->Output: Motor: ON, Alarm: TRIGGERED
-- Input: 35->Output: Motor: OFF, Alarm: RESET
-- Input: 25->Output: Motor: OFF, Alarm: RESET
+- (High Level (Sensor Value > 80))->Input: 85->Output: Motor: ON, Alarm Status: ON
+- (Moderate Level (Sensor Value > 50 and ≤ 80))->Input: 70->Output: Motor: OFF, Alarm Status: OFF
+- (Low Level (Sensor Value ≤ 50))->Input: 30->Output: Motor Status: ON,Alarm Status: OFF
+ 
 
 ### Challenges and Insights
 
