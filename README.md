@@ -1,6 +1,8 @@
-# -ICS3203-CAT2-Assembly--Wangondu-Mercy-Mumbi--152063-.
-This repository contains the solutions to the CAT 2 Assembly Programming tasks for ICS3203. The tasks demonstrate core assembly programming concepts such as control flow, array manipulation, modular programming, and data monitoring.
 
+# ICS3203(AssemblyProgramming-CAT2)-Wangondu Mercy Mumbi-152063
+### DESCRIPTION OF THE FOUR TASKS 
+
+This repository contains the solutions to the CAT 2 Assembly Programming tasks for ICS3203. The tasks demonstrate core assembly programming concepts such as control flow, array manipulation, modular programming, and data monitoring.
 
 ## Task 1: Control Flow and Conditional Logic
 ### Purpose
@@ -22,17 +24,11 @@ This program prompts the user to input a single-digit number and classifies it a
 User enters an integer (e.g. 50,-970) and the program will classify and print whether the number is positive, negative, or zero.
 
 ### Example Input and Output
-1. Input: 5
+1. Input: 5->Output: The number is POSITIVE
 
-Output: The number is POSITIVE
+2. Input: 0->Output: The number is ZERO
 
-2. Input: 0
-
-Output: The number is ZERO
-
-3. Input: -3
-
-Output: The number is NEGATIVE
+3. Input: -3->Output: The number is NEGATIVE
 
 ### Challenges and Insights 
 
@@ -82,10 +78,10 @@ This program reverses an array of integers in place using two pointers. It demon
     ./array_reverse
 
 4. **Array Input**
-**NOTE:** The user enters 5 single-digit numbers one at a time.
+
 - The program accepts an array of 5 single-digit integers from the user(e.g., [7, 8, 9, 10, 11]).
 - After execution, it outputs the reversed array to memory, which can be observed using a debugger or by modifying the program to display the result.
-
+**NOTE:** The user enters 5 single-digit numbers one at a time.
 
 ### Example Input and Output
 Input: [1, 2, 3, 4, 5] → Output: [5, 4, 3, 2, 1]
