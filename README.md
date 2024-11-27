@@ -44,6 +44,8 @@ User enters an integer (e.g. 50,-970) and the program will classify and print wh
 - je ensures the program correctly jumps to the "zero" case.
 
 - Using jmp after each case prevents unintended code execution.
+
+  
 **Challenges:**
 
 1. Converting user input from ASCII to integer format.
